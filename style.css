@@ -96,6 +96,7 @@ footer {
     }
         .stats {
             width: calc(100% - 4rem);
+            padding: 2rem;
             text-align: center;
         }
             .statsData {
