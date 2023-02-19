@@ -1,3 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca');
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #0a0c1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    max-width: 1024px;
+    background-color: #1c1938;
+    border-radius: 1rem;
+}
+
+    .stats {
+        width: calc(50% - 4rem);
+        padding: 2rem;
+    }
+        .statsIntro {
+            margin-bottom: 2rem;
+        }
+            .statsIntro h1 {
+                font-family: 'Lexan Deca', sans-serif;
+                color: white;
+                margin-block-end: 1rem;
+            }
+                .statsIntro h1 span {
+                    color: #a755d4;
+                }
+
+            .statsIntro p {
+                font-family: 'Inter', sans-serif;
+                color: hsla(0, 0%, 100%, 0.75);
+            }
+
+        .statsData {
+            width: 100%;
+            display: flex;
+        }
+            
+            .data {
+                width: calc(100% / 3);
+                text-transform: uppercase;
+                font-family: 'Inter', sans-serif;
+                color: hsla(0, 0%, 100%, 0.6);
+            }
+
+                .data h2 {
+                    font-family: 'Lexan Deca', sans-serif;
+                    color: white;
+                    margin-block-end: 1rem;
+                }
+
+        .img {
+            width: 50%;
+            background-image: url(./images/image-header-desktop.jpg);
+            background-size: cover;
+            border-radius: 0 1rem 1rem 0;
+        }
+
+            .overlay {
+                width: 100%;
+                height: 100%;
+                opacity: 0.6;
+                background-color: #a755d4;
+                border-radius: 0 1rem 1rem 0;
+            }
+    
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    color: white;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-aspect-ratio: 1 / 1) and (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+    
+
+    main {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        flex-direction: column-reverse;
+    }
+        .stats {
+            width: calc(100% - 4rem);
+            text-align: center;
+        }
+            .statsData {
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .data {
+                    width: 100%;
+                }
+
+        .img {
+            width: 100%;
+            height: 30vh;
+            border-radius: 1rem 1rem 0 0;
+        }
+            .overlay {
+                border-radius: 1rem 1rem 0 0;
+            }
+    
+    footer {
+        position: static;
+        margin-bottom: 1vh;
+    }
+}
+
